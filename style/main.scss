@@ -1,0 +1,192 @@
+$base-color-blue: #0d6efd;
+$base-color-white: #fff;
+$base-color-light: #ebeff3;
+$base-color-dark: #212529;
+
+@mixin hoverEffect{
+    background-color: $base-color-blue;
+    color: $base-color-white;
+    transition: 1s ease-in-out;
+}
+
+@mixin priceOffer($listAmount){
+    
+    @for $val from 1 through $listAmount{
+        .card-element:nth-of-type((#{$listAmount} - 1)) > i:nth-of-type(#{$val}){
+            color: $base-color-blue;
+        }
+    }
+}
+// the latest news and blog part
+.latest-news-items{
+    width: 100%;
+    height: 80vh; 
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, minmax(100px,1fr));
+    align-items: center;
+    justify-content: center;
+.news-single-item{
+    position: relative;
+    width: 26vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+img{
+    width: 100%;
+    height: 70%;
+    border-radius: 10px;
+    }
+.news-small-item{
+    width: 45%;
+    height: 5rem;
+    background-color: var(--base-color-light);
+    border-radius: 50px;
+    position: absolute;
+    left: 23rem;
+    bottom: 17rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding-left: 1.5rem;
+    background-color: $base-color-blue;
+    color: $base-color-white;
+   
+    img{
+        width: 4rem;
+        height: 4rem;
+        border-radius: 100%;
+    }
+    h6{
+        font-size: 1.5em;
+    }
+}
+h2{
+    font-size: 3.1em;
+    font-weight: 500;
+}
+p{
+    font-size: 2.1em;
+    color: #696a6b;
+}
+}
+}
+
+.latest-news-items .news-single-item:hover{
+    img{
+        transform: scale(1.03);
+        transition: 1s transform ease-in-out ;
+    }
+    h2{
+        color: $base-color-blue;
+    }
+}
+
+// end of the news and blog part
+
+//Team hover effect part
+
+.team-single-item-text{
+    .team-social{
+        display: none;
+        color: $base-color-dark;
+    }
+    .team-social i:hover{
+        color: $base-color-blue;
+    }
+}
+.team-single-item-text:hover{
+    @include hoverEffect();
+    .team-social{
+        display: block;
+        transition: 2s display ease-in-out;
+    }
+}
+
+//Team hover effect part end
+
+
+// Pricing and Plans part
+#pricing{
+    background-color: $base-color-light;
+}
+.pricing-card{
+    width: 25vw;
+    height: 90vh;
+    background-color: $base-color-white;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem; 
+    align-items: center;
+    padding-top: 7rem;
+    border-radius: 5px;
+    button{
+        color: $base-color-blue;
+        font-size: 2em;
+        height: 4.5rem;
+        background-color: $base-color-white;
+    }
+button:nth-of-type(1){
+    @extend button;
+    width: 15rem;
+    border: 2px solid $base-color-blue;
+    border-radius: 50px;
+}
+button:nth-of-type(2){
+    @extend button;
+    width: 30rem;
+    border: 1px solid $base-color-blue;
+    border-radius: 5px;
+}
+p{
+    font-size: 2em;
+    text-align: center;
+    color: #696a6b;
+}
+.price{
+    p{
+        display: inline;
+    }
+   p:nth-of-type(2){
+
+    font-size: 5em;
+    font-weight: 500;
+    color: $base-color-dark;
+   }
+}
+.card-element{
+    width: 80%;
+   display: flex;
+   flex-direction: column;
+   align-items: unset;
+   color: #696a6b;
+   div{
+    font-size: 2em;
+    padding-top: 1rem;
+   }
+}
+.card-element:nth-of-type(1){
+    @include priceOffer(2);
+    }
+    .card-element:nth-of-type(2){
+        @include priceOffer(3);
+        }
+        .card-element:nth-of-type(3){
+            @include priceOffer(4);
+            }
+    
+    
+}
+.pricing-card:hover{
+    box-shadow: 2px $base-color-light;
+}
+.pricing-card button:hover{
+    @include hoverEffect();   
+}
+.pricing-card button:active{
+    @include hoverEffect();
+}
+
+
+

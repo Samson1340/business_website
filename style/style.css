@@ -42,7 +42,7 @@ header{
 }
 
 .header{
-    width: 70vw;
+    width: 80vw;
     /* height: 100%; */
     display: flex;
     justify-content: space-between;
@@ -87,7 +87,7 @@ header{
     
 }
 .welcome-info{
-    width: 70vw;
+    width: 80vw;
     height: 100vh;
     display: flex;
     gap: 5rem;
@@ -154,7 +154,7 @@ header{
 }
 
 .welcome-info1{
-    width: 70vw;
+    width: 80vw;
     height: 100vh;
     display: flex;
     gap: 8rem;
@@ -217,8 +217,8 @@ header{
 /* header for all section */
 
 .section-title{
-    width: 28vw;
-    margin: 5rem auto;
+    width: 40vw;
+    margin: 3rem auto;
     text-align: center;
 }
 .section-title h5 {
@@ -234,21 +234,21 @@ header{
     font-size: 4em;
 }
 .section-title p {
-    padding-top: 2rem;
+    padding-top: 1.5rem;
     font-size: 2em;
 }
 
 /* end of header for all section */
 
 .sub-section-main{
-    width: 70vw;
-    height: 100vh;
+    width: 80vw;
+    height: 170vh;
     margin: 0 auto;
-    padding-top: 5rem;
+    padding-top: 2rem;
 }
 .section-content{
     width: 100%;
-    height: 65vh; 
+    height: 80vh; 
     display: grid;
     gap: 2.5rem;
     grid-template-columns: repeat(3, minmax(100px,1fr));
@@ -257,14 +257,14 @@ header{
     padding: 0 3rem;
 }
 .section-content > .card{
-    width: 50rem;
-    height: 35rem;
+    width: 43rem;
+    height: 36rem;
     border: 2px solid var(--base-color-light);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
-    padding: 3rem 0 4rem 4rem;
+    gap: 4rem;
+    padding: 3rem 0 3rem 3rem;
     
 }
 .section-content > .card > .card-icon{
@@ -324,7 +324,7 @@ header{
 
 .portfolio-btn{
     width: 100%;
-    height: 10rem;
+    height: 5rem;
     text-align: center;
 }
 
@@ -349,5 +349,154 @@ header{
    
 }
 .portfolio-single-item{
-    @extend: .section-content;
+    width: 100%;
+    height: 80vh; 
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, minmax(100px,1fr));
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 0 0 0;
 }
+.portfolio-single-card {
+    width: 26vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.portfolio-single-card > img{
+    width: 25vw;
+    height: 42vh;
+    border-radius: 10px;
+}
+.portfolio-single-card > h2{
+    font-size: 3em;
+    font-weight: 500;
+}
+.portfolio-single-card > p{
+    font-size: 2.3em;
+    line-break: anywhere;
+}
+
+/* end of the portfolio part */
+
+.pricing-single-part{
+    width: 100%;
+    height: 80vh; 
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, minmax(100px,1fr));
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 0 0 0;
+}
+
+/* end of the pricing part */
+
+.team-items{
+    width: 100%;
+    height: 80vh; 
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, minmax(100px,1fr));
+    align-items: center;
+    justify-content: center;
+}
+
+.team-items > .team-single-item {
+    position: relative;
+    width: 26vw;
+    height: 60vh;
+    border: 2px solid var(--base-color-light);
+    border-radius: 15px;
+}
+.team-items > .team-single-item > img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    
+}
+.team-single-item > .team-single-item-text{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 14rem;
+    background-color: var(--base-color-white);
+    text-align: center;
+    padding-top: 4rem;
+}
+.team-single-item-text > h5{
+    font-size: 3em;
+    font-weight: 500;
+}
+.team-single-item-text > h6{
+    font-size: 2em;
+    font-weight: 500;
+    color: var(--base-color-blue);
+}
+.team-single-item-text > .team-social{
+    width: 35%;
+    height: 3.5rem;
+    background-color: var(--base-color-light);
+    border-radius: 50px;
+    position: inherit;
+    left: 15rem;
+    bottom: 12rem;
+}
+.team-single-item-text > .team-social > i{
+    padding: 1rem 0 1rem 1rem;
+    font-size: 1.5em;
+}
+.ad{
+    position: relative;
+    width: 100vw;
+    height: 75vh;
+}
+.ad > img{
+    width: 100%;
+    height: 100%;
+    background-color: var(--base-color-blue);
+}
+.ad > .ad-text{
+    position: absolute;
+    bottom: 0;
+    z-index: 8;
+    width: 100vw;
+    height: 100%;
+    padding-top: 10rem;
+    
+}
+.ad > .ad-text > .ad-text-center{
+    width: 50vw;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    margin: 0 auto;
+    color: var(--base-color-white);
+}
+.ad-text-center > h1{
+    font-size: 6em;
+}
+.ad-text-center > p{
+    font-size: 2.3em;
+}
+.ad-text-center > button{
+    width: 20rem;
+    height: 6rem;
+    margin: 0 auto;
+    font-size: 2em;
+    font-weight: 600;
+    border-radius: 5px;
+    color: var(--base-color-white);
+    background-color: var(--base-color-blue);
+    border: 2px solid var(--base-color-white);
+}
+.ad-text-center > button:hover{
+    background-color: var(--base-color-white);
+color: var(--base-color-blue);
+}
+
+/* end of the ad part */

@@ -1,0 +1,178 @@
+.latest-news-items {
+  width: 100%;
+  height: 80vh;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  align-items: center;
+  justify-content: center;
+}
+.latest-news-items .news-single-item {
+  position: relative;
+  width: 26vw;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.latest-news-items .news-single-item img {
+  width: 100%;
+  height: 70%;
+  border-radius: 10px;
+}
+.latest-news-items .news-single-item .news-small-item {
+  width: 45%;
+  height: 5rem;
+  background-color: var(--base-color-light);
+  border-radius: 50px;
+  position: absolute;
+  left: 23rem;
+  bottom: 17rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-left: 1.5rem;
+  background-color: #0d6efd;
+  color: #fff;
+}
+.latest-news-items .news-single-item .news-small-item img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100%;
+}
+.latest-news-items .news-single-item .news-small-item h6 {
+  font-size: 1.5em;
+}
+.latest-news-items .news-single-item h2 {
+  font-size: 3.1em;
+  font-weight: 500;
+}
+.latest-news-items .news-single-item p {
+  font-size: 2.1em;
+  color: #696a6b;
+}
+
+.latest-news-items .news-single-item:hover img {
+  transform: scale(1.03);
+  transition: 1s transform ease-in-out;
+}
+.latest-news-items .news-single-item:hover h2 {
+  color: #0d6efd;
+}
+
+.team-single-item-text .team-social {
+  display: none;
+  color: #212529;
+}
+.team-single-item-text .team-social i:hover {
+  color: #0d6efd;
+}
+
+.team-single-item-text:hover {
+  background-color: #0d6efd;
+  color: #fff;
+  transition: 1s ease-in-out;
+}
+.team-single-item-text:hover .team-social {
+  display: block;
+  transition: 2s display ease-in-out;
+}
+
+#pricing {
+  background-color: #ebeff3;
+}
+
+.pricing-card {
+  width: 25vw;
+  height: 90vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: center;
+  padding-top: 7rem;
+  border-radius: 5px;
+}
+.pricing-card button, .pricing-card button:nth-of-type(2), .pricing-card button:nth-of-type(1) {
+  color: #0d6efd;
+  font-size: 2em;
+  height: 4.5rem;
+  background-color: #fff;
+}
+.pricing-card button:nth-of-type(1) {
+  width: 15rem;
+  border: 2px solid #0d6efd;
+  border-radius: 50px;
+}
+.pricing-card button:nth-of-type(2) {
+  width: 30rem;
+  border: 1px solid #0d6efd;
+  border-radius: 5px;
+}
+.pricing-card p {
+  font-size: 2em;
+  text-align: center;
+  color: #696a6b;
+}
+.pricing-card .price p {
+  display: inline;
+}
+.pricing-card .price p:nth-of-type(2) {
+  font-size: 5em;
+  font-weight: 500;
+  color: #212529;
+}
+.pricing-card .card-element {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: unset;
+  color: #696a6b;
+}
+.pricing-card .card-element div {
+  font-size: 2em;
+  padding-top: 1rem;
+}
+.pricing-card .card-element:nth-of-type(1) .card-element:nth-of-type((2 - 1)) > i:nth-of-type(1) {
+  color: #0d6efd;
+}
+.pricing-card .card-element:nth-of-type(1) .card-element:nth-of-type((2 - 1)) > i:nth-of-type(2) {
+  color: #0d6efd;
+}
+.pricing-card .card-element:nth-of-type(2) .card-element:nth-of-type((3 - 1)) > i:nth-of-type(1) {
+  color: #0d6efd;
+}
+.pricing-card .card-element:nth-of-type(2) .card-element:nth-of-type((3 - 1)) > i:nth-of-type(2) {
+  color: #0d6efd;
+}
+.pricing-card .card-element:nth-of-type(2) .card-element:nth-of-type((3 - 1)) > i:nth-of-type(3) {
+  color: #0d6efd;
+}
+.pricing-card .card-element:nth-of-type(3) .card-element:nth-of-type((4 - 1)) > i:nth-of-type(1) {
+  color: #0d6efd;
+}
+.pricing-card .card-element:nth-of-type(3) .card-element:nth-of-type((4 - 1)) > i:nth-of-type(2) {
+  color: #0d6efd;
+}
+.pricing-card .card-element:nth-of-type(3) .card-element:nth-of-type((4 - 1)) > i:nth-of-type(3) {
+  color: #0d6efd;
+}
+.pricing-card .card-element:nth-of-type(3) .card-element:nth-of-type((4 - 1)) > i:nth-of-type(4) {
+  color: #0d6efd;
+}
+
+.pricing-card:hover {
+  box-shadow: 2px #ebeff3;
+}
+
+.pricing-card button:hover {
+  background-color: #0d6efd;
+  color: #fff;
+  transition: 1s ease-in-out;
+}
+
+.pricing-card button:active {
+  background-color: #0d6efd;
+  color: #fff;
+  transition: 1s ease-in-out;
+}/*# sourceMappingURL=main.css.map */
