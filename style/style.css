@@ -199,13 +199,29 @@ header{
 .welcome-info-right > ul > li{
     list-style: none;
     display: inline;
-    padding-left: 4rem;
+    padding-left: 3rem;
 }
 .welcome-info-right > ul > li > a{
     font-size: 2em;
     text-decoration: none;
     margin-top: 2rem;
     width: 4rem;
+}
+.btn-link{
+    width: 18rem;
+    height: 5rem;
+    font-size: 1.2em;
+    background-color: var(--base-color-white);
+    border: none;
+    border-radius: 4px;
+    margin-top: 1.5rem;
+}
+.btn-link:hover{
+    color: var(--base-color-blue);
+}
+.btn-link:active{
+    background-color: var(--base-color-blue);
+    color: var(--base-color-white);
 }
 #description{
     font-size: 2em;
@@ -242,7 +258,7 @@ header{
 
 .sub-section-main{
     width: 80vw;
-    height: 150vh;
+    height: 160vh;
     margin: 0 auto;
     padding-top: 2rem;
 }
@@ -257,7 +273,7 @@ header{
     padding: 0 3rem;
 }
 .section-content > .card{
-    width: 43rem;
+    width: 48rem;
     height: 36rem;
     border: 2px solid var(--base-color-light);
     border-radius: 10px;
