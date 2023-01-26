@@ -505,3 +505,31 @@ color: var(--base-color-blue);
 }
 
 /* end of the ad part */
+
+/* the meet our clients part */
+#meet-our-clients{
+    background-color: #f6f7fa;;
+    text-align: center;
+}
+.clients-items{
+    width: 30vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px,1fr));
+    column-gap: 8rem;
+    row-gap: 5rem;
+    margin: 6rem auto 0 auto;
+}
+.clients-items > div{
+    width:min-content;
+    padding: 3.5rem 2.5rem;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+.clients-items > div > img{
+    width: 150px;
+}
+
+.clients-items > div:hover{
+    transform: scale(1.1, 1.1);
+    transition: .8s ease;
+}
