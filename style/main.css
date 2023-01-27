@@ -1,3 +1,53 @@
+#services {
+  height: 120vh;
+}
+
+.services-content {
+  width: 90%;
+  height: 40%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+.services-content .card {
+  width: 430px;
+  height: 300px;
+  border: 2px solid var(--base-color-light);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 3rem 0 3rem 3rem;
+}
+.services-content .card .card-icon {
+  width: 80px;
+  height: 80px;
+  border: 2px solid var(--base-color-blue);
+  border-radius: 60%;
+  text-align: center;
+  padding-top: 1.5rem;
+  font-size: 5em;
+  color: var(--base-color-blue);
+}
+.services-content .card .card-title {
+  font-size: 3em;
+  font-weight: 450;
+}
+.services-content .card .card-detail {
+  font-size: 2.3em;
+}
+.services-content .card:hover {
+  transform: scale(1.01, 1.01);
+  transition: 1s ease;
+}
+.services-content .card:hover .card-icon {
+  background-color: var(--base-color-blue);
+  color: var(--base-color-white);
+}
+
 .latest-news-items {
   width: 100%;
   height: 80vh;
@@ -47,7 +97,7 @@
   font-size: 3.1em;
   font-weight: 500;
 }
-.latest-news-items .news-single-item p {
+.latest-news-items .news-single-item p, .latest-news-items .news-single-item .footer-items .footer-single-item a, .footer-items .footer-single-item .latest-news-items .news-single-item a {
   font-size: 2.1em;
   color: #696a6b;
 }
@@ -79,7 +129,19 @@
 }
 
 #pricing {
+  height: 120vh;
   background-color: #ebeff3;
+}
+
+.pricing-single-part {
+  width: 100%;
+  height: 80vh;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  align-items: center;
+  justify-content: center;
+  padding: 1 0 0 0;
 }
 
 .pricing-card {
@@ -88,9 +150,9 @@
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 7rem;
   align-items: center;
-  padding-top: 7rem;
+  padding-top: 6rem;
   border-radius: 5px;
 }
 .pricing-card button, .pricing-card button:nth-of-type(2), .pricing-card button:nth-of-type(1) {
@@ -109,15 +171,15 @@
   border: 1px solid #0d6efd;
   border-radius: 5px;
 }
-.pricing-card p {
+.pricing-card p, .pricing-card .footer-items .footer-single-item a, .footer-items .footer-single-item .pricing-card a {
   font-size: 2em;
   text-align: center;
   color: #696a6b;
 }
-.pricing-card .price p {
+.pricing-card .price p, .pricing-card .price .footer-items .footer-single-item a, .footer-items .footer-single-item .pricing-card .price a {
   display: inline;
 }
-.pricing-card .price p:nth-of-type(2) {
+.pricing-card .price p:nth-of-type(2), .pricing-card .price .footer-items .footer-single-item a:nth-of-type(2), .footer-items .footer-single-item .pricing-card .price a:nth-of-type(2) {
   font-size: 5em;
   font-weight: 500;
   color: #212529;
@@ -178,11 +240,12 @@
 }
 
 #contact > .sub-section-main {
-  height: 50vh;
+  height: 60vh;
   display: flex;
   gap: 30px;
   flex-wrap: nowrap;
   margin-top: 10rem;
+  padding-top: 10rem;
 }
 #contact > .sub-section-main .contact-items {
   width: 30%;
@@ -221,12 +284,12 @@
   font-size: 3em;
   padding: 1rem 0;
 }
-#contact > .sub-section-main .contact-items .contact-detail .contact-detail-text p {
+#contact > .sub-section-main .contact-items .contact-detail .contact-detail-text p, #contact > .sub-section-main .contact-items .contact-detail .contact-detail-text .footer-items .footer-single-item a, .footer-items .footer-single-item #contact > .sub-section-main .contact-items .contact-detail .contact-detail-text a {
   font-size: 1.8em;
 }
 #contact > .sub-section-main .contact-form {
   width: 70%;
-  height: 700px;
+  height: 650px;
   background-color: #f8fafa;
   z-index: 8;
   text-align: center;
@@ -241,7 +304,7 @@
   font-size: 5em;
   font-weight: 500;
 }
-#contact > .sub-section-main .contact-form p {
+#contact > .sub-section-main .contact-form p, #contact > .sub-section-main .contact-form .footer-items .footer-single-item a, .footer-items .footer-single-item #contact > .sub-section-main .contact-form a {
   font-size: 2.2em;
 }
 #contact > .sub-section-main .contact-form form {
@@ -257,24 +320,24 @@
   height: 7rem;
   border-radius: 50px;
   border: 2px solid #ebeff3;
+  padding-left: 15px;
+  font-size: 2.4em;
 }
 #contact > .sub-section-main .contact-form form input::-moz-placeholder {
   padding-left: 15px;
-  font-size: 1.4em;
 }
 #contact > .sub-section-main .contact-form form input:-ms-input-placeholder {
   padding-left: 15px;
-  font-size: 1.4em;
 }
 #contact > .sub-section-main .contact-form form input::placeholder {
   padding-left: 15px;
-  font-size: 1.4em;
 }
 #contact > .sub-section-main .contact-form form textarea {
   width: 41vw;
   grid-column: 1/-1;
   border-radius: 15px;
   border: 2px solid #ebeff3;
+  padding-left: 15px;
 }
 #contact > .sub-section-main .contact-form form input[type=submit] {
   grid-column: 1/-1;
@@ -291,4 +354,134 @@
 #contact > .sub-section-main .contact-form form input[type=text]:hover, #contact > .sub-section-main .contact-form form input[type=email]:hover, #contact > .sub-section-main .contact-form form textarea:hover {
   border: 2px solid #0d6efd;
   transition: 0.8s ease;
+}
+#contact > .sub-section-main .contact-form form input[type=text]:focus, #contact > .sub-section-main .contact-form form input[type=email]:focus, #contact > .sub-section-main .contact-form form textarea:focus {
+  border: 2px solid #0d6efd;
+}
+
+footer > .sub-section-main {
+  height: 40vh;
+}
+
+.footer-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  justify-content: space-between;
+}
+.footer-items .footer-single-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-top: 3rem;
+  height: 100%;
+  margin: 0 auto;
+}
+.footer-items .footer-single-item p a, .footer-items .footer-single-item a a {
+  font-size: 1em;
+}
+.footer-items .footer-single-item h1 {
+  font-size: 3em;
+}
+.footer-items .footer-single-item p, .footer-items .footer-single-item a {
+  font-size: 2.5em;
+}
+.footer-items .footer-single-item img {
+  width: 10vw;
+}
+.footer-items .footer-single-item a {
+  text-decoration: none;
+  color: unset;
+}
+.footer-items .footer-single-item a:hover {
+  color: #0d6efd;
+  transition: 0.5s ease;
+}
+.footer-items .footer-single-item input {
+  width: 15vw;
+  height: 5rem;
+  padding-left: 2rem;
+  border-radius: 10px;
+  border: 2px solid #ebeff3;
+}
+
+#testimonials {
+  height: 100vh;
+}
+
+.testimonials-items {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(600px, 1fr));
+  gap: 5px;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+}
+.testimonials-items .testimonials-single-item {
+  width: 750px;
+  height: 300px;
+  display: none;
+  padding-top: 5rem;
+  border-radius: 10px;
+  position: relative;
+  border: 2px solid #ebeff3;
+}
+.testimonials-items .testimonials-single-item .text {
+  width: 85%;
+  display: grid;
+  grid-template-columns: -webkit-min-content auto;
+  grid-template-columns: min-content auto;
+  justify-content: baseline;
+  margin: 0 30px;
+}
+.testimonials-items .testimonials-single-item .text p, .testimonials-items .testimonials-single-item .text .footer-items .footer-single-item a, .footer-items .footer-single-item .testimonials-items .testimonials-single-item .text a {
+  grid-column: 1/-1;
+  font-size: 2.4em;
+  padding: 20px 0 50px 0;
+}
+.testimonials-items .testimonials-single-item .text img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+}
+.testimonials-items .testimonials-single-item .text .name-author {
+  padding-left: 20px;
+  align-items: center;
+  margin-top: 15px;
+}
+.testimonials-items .testimonials-single-item .text .name-author h1 {
+  font-size: 2.7em;
+}
+.testimonials-items .testimonials-single-item .text .name-author p, .testimonials-items .testimonials-single-item .text .name-author .footer-items .footer-single-item a, .footer-items .footer-single-item .testimonials-items .testimonials-single-item .text .name-author a {
+  padding: 0 0;
+}
+.testimonials-items .testimonials-single-item:nth-of-type(1), .testimonials-items .testimonials-single-item:nth-of-type(2) {
+  display: block;
+}
+
+.page-nav {
+  width: 200px;
+  height: 50px;
+  margin: 30px auto;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+.page-nav .page-nav-item {
+  width: 20px;
+  height: 8px;
+  border-radius: 5px;
+  background-color: #ebeff3;
+}
+.page-nav .page-nav-item:hover {
+  width: 30px;
+  background-color: #0d6efd;
+  transition: 0.8s ease-in-out;
+}
+
+@media (min-width: 768px) {
+  .page-nav-item:nth-of-type(4), .page-nav-item:nth-of-type(5) {
+    display: none;
+  }
 }/*# sourceMappingURL=main.css.map */

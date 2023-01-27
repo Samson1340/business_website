@@ -17,6 +17,61 @@ $base-color-dark: #212529;
         }
     }
 }
+
+// The service section of the page 
+#services{
+    height: 120vh;
+}
+.services-content{
+    width: 90%;
+    height: 40%; 
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px,1fr));
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+    .card{
+        width: 430px;
+        height: 300px;
+        border: 2px solid var(--base-color-light);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        padding: 3rem 0 3rem 3rem;
+
+        .card-icon{
+            width: 80px;
+            height: 80px;
+            border: 2px solid var(--base-color-blue);
+            border-radius: 60%;
+            text-align: center;
+            padding-top: 1.5rem;
+            font-size: 5em;
+            color: var(--base-color-blue);
+        }
+        .card-title{
+            font-size: 3em;
+            font-weight: 450;
+        }
+        .card-detail{
+            font-size: 2.3em;
+        }
+    }
+    .card:hover{
+        transform: scale(1.01, 1.01);
+        transition: 1s ease;
+        .card-icon{
+            background-color: var(--base-color-blue);
+            color: var(--base-color-white);
+        }   
+
+    }
+}
+// end of the service section
+
 // the latest news and blog part
 .latest-news-items{
     width: 100%;
@@ -109,7 +164,18 @@ p{
 
 // Pricing and Plans part
 #pricing{
+    height: 120vh;
     background-color: $base-color-light;
+}
+.pricing-single-part{
+    width: 100%;
+    height: 80vh; 
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, minmax(100px,1fr));
+    align-items: center;
+    justify-content: center;
+    padding: 1 0 0 0;
 }
 .pricing-card{
     width: 25vw;
@@ -117,9 +183,9 @@ p{
     background-color: $base-color-white;
     display: flex;
     flex-direction: column;
-    gap: 4rem; 
+    gap: 7rem; 
     align-items: center;
-    padding-top: 7rem;
+    padding-top: 6rem;
     border-radius: 5px;
     button{
         color: $base-color-blue;
@@ -192,11 +258,12 @@ p{
 // the contact part of the page
 
 #contact > .sub-section-main{
-    height: 50vh;
+    height: 60vh;
     display: flex;
     gap: 30px;
     flex-wrap: nowrap;
     margin-top: 10rem;
+    padding-top: 10rem;
    
     .contact-items{
         width: 30%;
@@ -242,7 +309,7 @@ p{
     }
     .contact-form{
         width: 70%;
-        height: 700px; 
+        height: 650px; 
         background-color: #f8fafa;
         z-index: 8;
         text-align: center;
@@ -272,16 +339,19 @@ p{
                 height: 7rem;
                 border-radius: 50px;
                 border: 2px solid $base-color-light;
+                padding-left: 15px;
+                font-size: 2.4em;
             }
             input::placeholder{
                 padding-left: 15px;
-                font-size: 1.4em;
+                // font-size: 1.4em;
             }
             textarea{
                 width: 41vw;
                 grid-column: 1 /-1;
                 border-radius: 15px;
                 border: 2px solid $base-color-light;
+                padding-left: 15px;
             }
             input[type="submit"]{
                 grid-column: 1 / -1;
@@ -299,10 +369,154 @@ p{
                 border: 2px solid $base-color-blue;
                 transition: .8s ease;
             }
+
+            input[type="text"]:focus,  input[type="email"]:focus, textarea:focus{
+                border: 2px solid $base-color-blue;
+                
+            }
             
         }
     }
 }
 
+// End the contact part of the page
 
+// the footer part of the page
 
+footer > .sub-section-main{
+    height: 40vh;
+}
+.footer-items{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px,1fr));
+    // gap: 5%;
+    justify-content: space-between;
+    // flex-wrap: nowrap;
+
+    .footer-single-item{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding-top: 3rem;
+        // width: fit-content;
+        height: 100%;
+        margin: 0 auto;
+        p{
+            a{
+                font-size: 1em;
+            }
+        }
+        h1{
+            font-size: 3em;
+        }
+        p{
+            font-size: 2.5em;
+        }
+        img{
+            width: 10vw;
+        }
+        a{
+            @extend p;
+            text-decoration: none;
+            color: unset;
+        }
+        a:hover{
+            color: $base-color-blue;
+            transition: .5s ease;
+        }
+        input{
+            width: 15vw;
+            height: 5rem;
+            padding-left: 2rem;
+            border-radius: 10px;
+            border: 2px solid $base-color-light;
+        }
+    }
+}
+
+#testimonials{
+    height: 100vh;
+
+}
+.testimonials-items{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(600px,1fr));
+    gap: 5px;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    .testimonials-single-item{
+        width: 750px;
+        height: 300px;
+        display:none;
+        padding-top: 5rem;
+        border-radius: 10px;
+        position: relative;
+        border: 2px solid $base-color-light;
+    .text{
+        width: 85%;
+        display: grid;
+        grid-template-columns: min-content auto;
+        justify-content: baseline;
+        margin: 0 30px;
+        p{
+            grid-column: 1 / -1;
+            font-size: 2.4em;
+            padding: 20px 0 50px 0;
+        }
+        img{
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+        }
+        .name-author{
+            padding-left: 20px;
+            align-items: center;
+            margin-top: 15px;
+
+            h1{
+                font-size: 2.7em;
+            }
+            p{
+                padding: 0 0;
+            }
+        }
+    }
+
+    }
+    .testimonials-single-item:nth-of-type(1), .testimonials-single-item:nth-of-type(2){
+        display: block;
+
+    }
+}
+
+.page-nav{
+    width: 200px;
+    height: 50px;
+    margin: 30px auto;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    .page-nav-item{
+        width: 20px;
+        height: 8px;
+        border-radius: 5px; 
+        background-color: $base-color-light;
+    }
+    .page-nav-item:hover{
+        width: 30px;
+        background-color: $base-color-blue;
+        transition: .8s ease-in-out;
+    }
+}
+
+$breakpoint-tablet: 768px;
+@media (min-width: $breakpoint-tablet){
+
+    .page-nav-item:nth-of-type(4), .page-nav-item:nth-of-type(5){
+        display: none;
+    }
+    
+}
